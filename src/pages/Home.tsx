@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
         <span className='hello-world-style'>Hello World！👋</span>
         <span className='desc-style'>Exploring Every Moment of Life</span>
       </div>
-      <button style={{ height: 50 }} onClick={toggleTheme}>切换</button>
+      <button onClick={toggleTheme}>切换</button>
     </>
   );
 };
