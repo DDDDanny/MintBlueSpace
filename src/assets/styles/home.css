@@ -1,0 +1,44 @@
+.home-desc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+
+    /* S (320px - 479px) */
+    @media (max-width: 679px) {
+        .hello-world-style {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .desc-style {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    /* M (480px - 767px) */
+    @media (min-width: 480px) and (max-width: 767px) {
+        .hello-world-style {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .desc-style {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    /* L (1440px及以上) */
+    @media (min-width: 768px) {
+        .hello-world-style {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        .desc-style {
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+    }
+}

@@ -1,16 +1,18 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
+import '../assets/styles/home.css'
 
 const HomePage: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header>
-      <h1>我的博客</h1>
-      <button onClick={toggleTheme}>
-        切换到 {theme === 'light' ? '暗黑' : '亮白'} 主题
-      </button>
-    </header>
+    <>
+      <div className='home-desc-container' >
+        <span className='hello-world-style'>Hello World！👋</span>
+        <span className='desc-style'>Exploring Every Moment of Life</span>
+      </div>
+      <button style={{ height: 50 }} onClick={toggleTheme}>切换</button>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import AppRouter from './router'
 import { ThemeProvider } from './context/ThemeContext'
-import './assets/styles/global.css'
 
 const App: React.FC = () => {
   return (
@@ -10,9 +9,7 @@ const App: React.FC = () => {
         <span>MintBlue</span>
       </div>
       <div id="layout" className='container'>
-        <div className='content'>
-          <AppRouter/>
-        </div>
+        <AppRouter/>
       </div>
     </ThemeProvider>
   );
