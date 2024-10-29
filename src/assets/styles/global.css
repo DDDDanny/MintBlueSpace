@@ -1,14 +1,100 @@
 body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    font-family: "Andale Mono", sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+#root {
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-family: "DingTalk JinBuTi", sans-serif;
+    color: var(--header-color);
 }
 
 :root {
     --background-color: #EEEEEE;
     --text-color: #2D2D2D;
+    --header-color: #FAC145;
 }
 
 [data-theme='dark'] {
     --background-color: #292b30;
     --text-color: white;
+    --header-color: #FAC145;
 }
+
+.container {
+    height: calc(100% - 80px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 默认设置为4列 */
+    gap: 12px; /* 默认水槽 */
+    margin: 0 16px; /* 默认边距 */
+}
+
+/* XS (320px - 479px) */
+@media (max-width: 479px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 4列 */
+        gap: 12px;
+        margin: 0 16px;
+    }
+}
+
+/* S (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        grid-template-columns: repeat(8, 1fr); /* 8列 */
+        gap: 12px;
+        margin: 0 16px;
+    }
+}
+
+/* M (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        grid-template-columns: repeat(12, 1fr); /* 12列 */
+        gap: 12px;
+        margin: 0 24px;
+    }
+}
+
+/* L (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container {
+        grid-template-columns: repeat(12, 1fr); /* 12列 */
+        gap: 16px;
+        margin: 0 32px;
+    }
+}
+
+/* XL (1440px及以上) */
+@media (min-width: 1440px) {
+    .container {
+        grid-template-columns: repeat(12, minmax(0, 1fr)); /* 12列 */
+        gap: 16px;
+        margin: 0 32px;
+    }
+
+    .content {
+        /* 设置栅格宽度为96px */
+        width: calc(96px * 12 + 16px * 11); /* 12列 + 11个水槽 */
+    }
+
+    /* 如果需要，设置每列的最大宽度以防止超出容器 */
+    .container > div {
+        max-width: 96px; /* 每个栅格的最大宽度 */
+    }
+}
+
