@@ -2,6 +2,8 @@ import React from 'react'
 import AppRouter from './router'
 import { Github, Sun, Moon } from 'lucide-react'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
+import {cn} from "@/lib/utils.ts";
+import DotPattern from "@/components/ui/dot-pattern.tsx";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme(); // 在 ThemeProvider 内部使用
@@ -32,6 +34,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Header />
+      <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
       <div id="layout" className='container'>
         <AppRouter/>
       </div>
