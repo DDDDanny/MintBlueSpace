@@ -1,6 +1,6 @@
 import React from 'react'
 import AppRouter from './router'
-import { Github, Sun, Moon } from 'lucide-react'
+import {Github, Sun, Moon, AlignJustify} from 'lucide-react'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
 import {cn} from "@/lib/utils.ts";
 import DotPattern from "@/components/ui/dot-pattern.tsx";
@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   return (
     <div className='header'>
       <div className='header-content'>
-        <span>MintBlue</span>
+        <span style={{ marginLeft: 20 }}>MintBlue</span>
         <div className='menu-items-container'>
           <span className='menu-item'>Home</span>
           <span className='menu-item'>Posts</span>
@@ -20,9 +20,10 @@ const Header: React.FC = () => {
           <span className='menu-item'>About</span>
         </div>
         <div className='icons-container'>
-          <div className='icon-item'><Github /></div>
+          <div className='menu-suite'><AlignJustify /></div>
+          <div className='icon-item'><Github/></div>
           <div className='icon-item' onClick={toggleTheme}>
-            {isLightTheme ? <Sun /> : <Moon />}
+            {isLightTheme ? <Sun/> : <Moon/>}
           </div>
         </div>
       </div>
