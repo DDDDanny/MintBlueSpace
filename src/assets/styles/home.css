@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 50px;
+    /*margin-top: 120px;*/
     align-items: center;
 
     /* S (320px - 479px) */
     @media (max-width: 679px) {
+        margin-top: 70px;
         .hello-world-style {
             font-size: 2rem;
             margin-bottom: 10px;
@@ -20,6 +21,7 @@
 
     /* M (480px - 767px) */
     @media (min-width: 480px) and (max-width: 767px) {
+        margin-top: 90px;
         .hello-world-style {
             font-size: 3rem;
             margin-bottom: 10px;
@@ -32,6 +34,7 @@
 
     /* L (1440px及以上) */
     @media (min-width: 768px) {
+        margin-top: 120px;
         .hello-world-style {
             font-size: 4rem;
             margin-bottom: 10px;
