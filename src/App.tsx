@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <>
       <div className='header'>
         <div className='header-content'>
-          <span style={{marginLeft: 20}}>MintBlue</span>
+          <span style={{marginLeft: 20}}>MBSpace</span>
           <div className='menu-items-container'>
             <span className='menu-item'>Home</span>
             <span className='menu-item'>Posts</span>
