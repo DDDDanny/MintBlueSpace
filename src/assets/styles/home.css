@@ -1,5 +1,5 @@
 .home-introduction-container {
-    width: 770px;
+    width: 550px;
     /*height: 550px;*/
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     font-size: 20px;
 
     /* S (320px - 479px) */
-    @media (max-width: 1423px) {
+    @media (max-width: 1179px) {
         margin-top: 60px;
         /*height: 100%;*/
     }
@@ -44,7 +44,7 @@
     @media (min-width: 480px) and (max-width: 767px) {
         /*margin-top: 90px;*/
         .hello-world-style {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
         }
         .desc-style {
@@ -57,11 +57,11 @@
     @media (min-width: 768px) {
         /*margin-top: 120px;*/
         .hello-world-style {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
         }
         .desc-style {
-            font-size: 2rem;
+            font-size: 1.8rem;
             letter-spacing: 2px;
         }
     }
