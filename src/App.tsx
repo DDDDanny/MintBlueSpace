@@ -70,10 +70,10 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Header/>
-      {/*<DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>*/}
+      <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
       <div className='container-box'>
         <div id="layout" className='container'>
-          <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
+          {/*<DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>*/}
           <AppRouter/>
         </div>
       </div>
