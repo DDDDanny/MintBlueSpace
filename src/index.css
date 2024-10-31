@@ -139,7 +139,7 @@ body {
   flex-direction: column;
   position: fixed;
   top: 80px;
-  z-index: 10;
+  z-index: 30;
   background-color: var(--dropdown-menus-background-color);
   box-shadow: 0 20px 20px 0 #00000030;
   padding: 20px;
