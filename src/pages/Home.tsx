@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
   ];
   return (
     <>
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+      <div style={{display: 'flex', width: '100%', justifyContent: 'space-around', flexWrap: 'wrap'}}>
         <div className='home-introduction-container'>
           <BoxReveal boxColor={"#FAC145"} duration={0.5}>
             <SparklesText text={'Hello World！👋'} className='hello-world-style'/>
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
             <BoxReveal boxColor={"#FAC145"} duration={1.5}>
               <span className='desc-second-style'>
                 <span>我是</span>
-                <span style={{ color: '#FAC145' }}>MintBlue</span>
+                <span style={{color: '#FAC145'}}>MintBlue</span>
                 <span>，一个喜欢前端设计的</span>
                 <span className='important-desc'>全栈开发工程师</span>
                 <span>。在这里, 我会分享我的经验、实用的工具和一些有趣的东西🎉</span>
@@ -43,11 +43,23 @@ const HomePage: React.FC = () => {
           </BoxReveal>
         </div>
         <div
-          className="flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg  bg-background px-5 pb-5 pt-15 "
-          style={{marginTop: 60}}
+          className="flex max-w-lg items-center justify-center overflow-hidden rounded-lg  bg-background px-5 pb-5 pt-15 "
+          style={{marginTop: 40}}
         >
           <IconCloud iconSlugs={slugs}/>
         </div>
+      </div>
+
+      <div style={{width: '100%', margin: '20px 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
       </div>
     </>
   );

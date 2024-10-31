@@ -63,7 +63,6 @@ const Header: React.FC = () => {
         </span>
       </div>
     </>
-
   );
 }
 
@@ -72,9 +71,14 @@ const App: React.FC = () => {
     <ThemeProvider>
       <Header/>
       {/*<DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>*/}
-      <div id="layout" className='container'>
-        <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
-        <AppRouter/>
+      <div className='container-box'>
+        <div id="layout" className='container'>
+          <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
+          <AppRouter/>
+        </div>
+      </div>
+      <div className='footer-container'>
+        <span>Copyright © 2024 MintBlue</span>
       </div>
     </ThemeProvider>
   );

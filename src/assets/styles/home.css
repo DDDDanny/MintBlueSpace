@@ -1,6 +1,6 @@
 .home-introduction-container {
     width: 770px;
-    height: 550px;
+    /*height: 550px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     /* S (320px - 479px) */
     @media (max-width: 1423px) {
         margin-top: 60px;
-        height: 100%;
+        /*height: 100%;*/
     }
 
     .desc-second-style {
