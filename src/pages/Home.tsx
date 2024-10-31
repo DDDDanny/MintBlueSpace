@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
             <span className='desc-style'>Exploring Every Moment of Life</span>
           </BoxReveal>
           <div style={{marginTop: 20, textIndent: '2rem'}}>
-            <BoxReveal boxColor={"#FAC145"} duration={1.5}>
+            <BoxReveal boxColor={"#FAC145"} duration={1.2}>
               <span className='desc-second-style'>
                 <span>我是</span>
                 <span style={{color: '#FAC145'}}>MintBlue</span>
