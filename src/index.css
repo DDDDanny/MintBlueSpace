@@ -140,7 +140,7 @@ body {
 
 .dropdown-menu-items-container {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   position: fixed;
   top: 80px;
@@ -150,9 +150,6 @@ body {
   padding: 20px;
   font-size: 20px;
   color: var(--header-color);
-  transform: translateY(-10px); /* 初始状态上移 */
-  transition: max-height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
 
   .dropdown-menu-item {
     width: 100%;
@@ -169,8 +166,7 @@ body {
 }
 
 .dropdown-menu-items-container.show {
-  transform: translateY(0); /* 恢复到正常位置 */
-  opacity: 1;
+  display: flex;
 }
 
 .footer-container {
