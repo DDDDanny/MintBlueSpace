@@ -50,16 +50,82 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div style={{width: '100%', margin: '20px 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
-        <div style={{width: '45%', minHeight: 200, backgroundColor: '#ffffff20', margin: '20px 0'}}></div>
+      <div className='posts-list-container'>
+        <div className='posts-item-container'>
+          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <div className='item-content-container'>
+            <div className='item-title-desc-box'>
+              <span className='item-title'>这是MintBlue Space</span>
+              <span className='item-overview-content'>
+                从开始计划到设计最后到完成历时3年。哈哈哈，今天，它终于上线了
+              </span>
+            </div>
+            <div className='item-footer-container'>
+              <span>View More</span>
+              <span>2024-11-01</span>
+            </div>
+          </div>
+        </div>
+        <div className='posts-item-container'>
+          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <div className='item-content-container'>
+            <div className='item-title-desc-box'>
+              <span className='item-title'>这是MintBlue Space</span>
+              <span className='item-overview-content'>
+                从开始计划到设计最后到完成历时3年。哈哈哈，今天，它终于上线了
+              </span>
+            </div>
+            <div className='item-footer-container'>
+              <span>View More</span>
+              <span>2024-11-01</span>
+            </div>
+          </div>
+        </div>
+        <div className='posts-item-container'>
+          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <div className='item-content-container'>
+            <div className='item-title-desc-box'>
+              <span className='item-title'>这是MintBlue Space</span>
+              <span className='item-overview-content'>
+                从开始计划到设计最后到完成历时3年。哈哈哈，今天，它终于上线了
+              </span>
+            </div>
+            <div className='item-footer-container'>
+              <span>View More</span>
+              <span>2024-11-01</span>
+            </div>
+          </div>
+        </div>
+        <div className='posts-item-container'>
+          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <div className='item-content-container'>
+            <div className='item-title-desc-box'>
+              <span className='item-title'>这是MintBlue Space</span>
+              <span className='item-overview-content'>
+                从开始计划到设计最后到完成历时3年。哈哈哈，今天，它终于上线了
+              </span>
+            </div>
+            <div className='item-footer-container'>
+              <span>View More</span>
+              <span>2024-11-01</span>
+            </div>
+          </div>
+        </div>
+        <div className='posts-item-container'>
+          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <div className='item-content-container'>
+            <div className='item-title-desc-box'>
+              <span className='item-title'>这是MintBlue Space</span>
+              <span className='item-overview-content'>
+                从开始计划到设计最后到完成历时3年。哈哈哈，今天，它终于上线了
+              </span>
+            </div>
+            <div className='item-footer-container'>
+              <span>View More</span>
+              <span>2024-11-01</span>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
