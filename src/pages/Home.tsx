@@ -126,6 +126,11 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className='posts-item-container'>
+          <div className='posts-more-card'>
+            <span style={{ margin: 20 }}>More...</span>
+          </div>
+        </div>
       </div>
     </>
   );
