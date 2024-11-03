@@ -1,9 +1,14 @@
 import React from 'react'
-import AppRouter from './router'
-import {Github, Sun, Moon, AlignJustify, Home, ScrollText, Link, VenetianMask} from 'lucide-react'
+import { BrowserRouter as Router } from 'react-router-dom';
+import {Github, Sun, Moon, AlignJustify, Home as HomeIcon, ScrollText, Link as LinkIcon, VenetianMask} from 'lucide-react'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
-import {cn} from "@/lib/utils.ts";
+import { cn } from "@/lib/utils.ts";
 import DotPattern from "@/components/ui/dot-pattern.tsx";
+import {Link, Route, Routes} from "react-router-dom";
+import Home from './pages/Home';
+import Posts from "@/pages/Posts.tsx";
+import Links from "@/pages/Links.tsx";
+import About from "@/pages/About.tsx";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme(); // 在 ThemeProvider 内部使用
@@ -29,12 +34,19 @@ const Header: React.FC = () => {
         <div className='header-content'>
           <span style={{marginLeft: 20}}>MBSpace</span>
           <div className='menu-items-container'>
-            <span className='menu-item'>Home</span>
-            <span className='menu-item'>Posts</span>
-            <span className='menu-item'>Links</span>
-            <span className='menu-item'>About</span>
+            <Link to={'/'}>
+              <span className='menu-item'>Home</span>
+            </Link>
+            <Link to={'/posts'}>
+              <span className='menu-item'>Posts</span>
+            </Link>
+            <Link to={'/links'}>
+              <span className='menu-item'>Links</span>
+            </Link>
+            <Link to={'/about'}>
+              <span className='menu-item'>About</span>
+            </Link>
           </div>
-
           <div className='icons-container'>
             <div className='menu-suite' onClick={toggleDropdown}><AlignJustify/></div>
             <div className='icon-item'><Github/></div>
@@ -45,22 +57,30 @@ const Header: React.FC = () => {
         </div>
       </div>
       <div className='dropdown-menu-items-container'>
-        <span className='dropdown-menu-item'>
-          <Home />
-          <span style={{ marginLeft: 20 }}>首页 ( Home )</span>
-        </span>
-        <span className='dropdown-menu-item'>
-          <ScrollText/>
-          <span style={{marginLeft: 20}}>文章 ( Posts )</span>
-        </span>
-        <span className='dropdown-menu-item'>
-          <Link/>
-          <span style={{marginLeft: 20}}>友链 ( Links )</span>
-        </span>
-        <span className='dropdown-menu-item'>
-          <VenetianMask/>
-          <span style={{marginLeft: 20}}>关于 ( About )</span>
-        </span>
+        <Link to={'/'}>
+          <span className='dropdown-menu-item'>
+            <HomeIcon/>
+            <span style={{marginLeft: 20}}>首页 ( Home )</span>
+          </span>
+        </Link>
+        <Link to={'/posts'}>
+          <span className='dropdown-menu-item'>
+            <ScrollText/>
+            <span style={{marginLeft: 20}}>文章 ( Posts )</span>
+          </span>
+        </Link>
+        <Link to={'/links'}>
+          <span className='dropdown-menu-item'>
+            <LinkIcon/>
+            <span style={{marginLeft: 20}}>友链 ( Links )</span>
+          </span>
+        </Link>
+        <Link to={'/about'}>
+          <span className='dropdown-menu-item'>
+            <VenetianMask/>
+            <span style={{marginLeft: 20}}>关于 ( About )</span>
+          </span>
+        </Link>
       </div>
     </>
   );
@@ -69,17 +89,23 @@ const Header: React.FC = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <Header/>
-      <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
-      <div className='container-box'>
-        <div id="layout" className='container'>
-          {/*<DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>*/}
-          <AppRouter/>
+      <Router>
+        <Header/>
+        <DotPattern className={cn("[mask-image:radial-gradient(circle_at_center,#ffffff50,transparent)]",)}/>
+        <div className='container-box'>
+          <div id="layout" className='container'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/posts" element={<Posts />} />
+              <Route path="/links" element={<Links />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-      <div className='footer-container'>
-        <span>Copyright © 2024 MintBlue</span>
-      </div>
+        <div className='footer-container'>
+          <span>Copyright © 2024 MintBlue</span>
+        </div>
+      </Router>
     </ThemeProvider>
   );
 };
