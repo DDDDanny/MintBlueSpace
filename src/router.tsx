@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Posts from './pages/Posts';
+import Links from './pages/Links';
 
 
 const AppRouter: React.FC = () => {
@@ -11,6 +12,7 @@ const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<Posts />} />
+        <Route path="/links" element={<Links />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </Router>
