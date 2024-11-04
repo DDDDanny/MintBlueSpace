@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/home.css'
+import './home.css'
 import BoxReveal from "@/components/ui/box-reveal.tsx";
 import IconCloud from "@/components/ui/icon-cloud.tsx";
 import SparklesText from "@/components/ui/sparkles-text.tsx";
@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
 
       <div className='posts-list-container'>
         <div className='posts-item-container'>
-          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <img className='list-item-image' src='/src/assets/images/001.png' alt='111'/>
           <div className='item-content-container'>
             <div className='item-title-desc-box'>
               <span className='item-title'>这是MintBlue Space</span>
@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className='posts-item-container'>
-          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <img className='list-item-image' src='/src/assets/images/001.png' alt='111'/>
           <div className='item-content-container'>
             <div className='item-title-desc-box'>
               <span className='item-title'>这是MintBlue Space</span>
@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className='posts-item-container'>
-          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <img className='list-item-image' src='/src/assets/images/001.png' alt='111'/>
           <div className='item-content-container'>
             <div className='item-title-desc-box'>
               <span className='item-title'>这是MintBlue Space</span>
@@ -97,7 +97,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className='posts-item-container'>
-          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <img className='list-item-image' src='/src/assets/images/001.png' alt='111'/>
           <div className='item-content-container'>
             <div className='item-title-desc-box'>
               <span className='item-title'>这是MintBlue Space</span>
@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className='posts-item-container'>
-          <img className='list-item-image' src='src/assets/images/001.png' alt='111'/>
+          <img className='list-item-image' src='/src/assets/images/001.png' alt='111'/>
           <div className='item-content-container'>
             <div className='item-title-desc-box'>
               <span className='item-title'>这是MintBlue Space</span>
