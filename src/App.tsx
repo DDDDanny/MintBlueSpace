@@ -5,10 +5,10 @@ import { ThemeProvider, useTheme } from './context/ThemeContext'
 import { cn } from "@/lib/utils.ts";
 import DotPattern from "@/components/ui/dot-pattern.tsx";
 import {Link, Route, Routes} from "react-router-dom";
-import Home from './pages/Home';
+import Home from './pages/HomePage/Home.tsx';
 import Posts from "@/pages/Posts.tsx";
 import Links from "@/pages/Links.tsx";
-import About from "@/pages/About.tsx";
+import About from "@/pages/AboutPage/About.tsx";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme(); // 在 ThemeProvider 内部使用
