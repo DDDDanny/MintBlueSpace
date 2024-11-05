@@ -67,5 +67,28 @@
     }
 }
 
+.posts-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .post-content-container {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-color);
+        border-radius: 8px;
+        box-shadow: var(--post-box-shadow);
+        margin: 20px 0;
+        transition: all .3s;
+
+        &:hover {
+            box-shadow: var(--post-box-shadow-hover);
+            cursor: pointer;
+        }
+    }
+}
 
 

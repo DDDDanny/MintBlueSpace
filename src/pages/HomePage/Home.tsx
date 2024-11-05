@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css'
+import './index.css'
 import BoxReveal from "@/components/ui/box-reveal.tsx";
 import IconCloud from "@/components/ui/icon-cloud.tsx";
 import SparklesText from "@/components/ui/sparkles-text.tsx";
@@ -48,6 +48,9 @@ const HomePage: React.FC = () => {
         >
           <IconCloud iconSlugs={slugs}/>
         </div>
+      </div>
+      <div className='posts-main-container'>
+        <div className='post-content-container'></div>
       </div>
     </>
   );

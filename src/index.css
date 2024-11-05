@@ -8,6 +8,8 @@
   --header-color: #FAC145;
   --header-background-color: #292b30;
   --dropdown-menus-background-color: #303339;
+  --post-box-shadow: 0 1px 8px #00000025;
+  --post-box-shadow-hover: 0 2px 16px #00000035;
   --posts-tags-background-color: #30333920;
   --posts-tags-item-background-color: #30333950;
 }
@@ -18,6 +20,8 @@
   --header-color: #FAC145;
   --header-background-color: #1e2128;
   --dropdown-menus-background-color: #262930;
+  --post-box-shadow: 0 1px 8px #00000060;
+  --post-box-shadow-hover: 0 2px 16px #00000070;
   --posts-tags-background-color: #EEEEEE20;
   --posts-tags-item-background-color: #EEEEEE20;
 }
