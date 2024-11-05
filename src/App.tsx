@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom';
-import {Github, Sun, Moon, AlignJustify, Home as HomeIcon, ScrollText, Link as LinkIcon, VenetianMask} from 'lucide-react'
+import {Github, Sun, Moon, AlignJustify, Image, ScrollText, Link as LinkIcon, VenetianMask} from 'lucide-react'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
 import { cn } from "@/lib/utils.ts";
 import DotPattern from "@/components/ui/dot-pattern.tsx";
 import {Link, Route, Routes} from "react-router-dom";
 import Home from './pages/HomePage/Home.tsx';
-import Posts from "@/pages/PostsPage/Posts.tsx";
+import Gallery from "@/pages/GalleryPage/Gallery.tsx";
 import Links from "@/pages/LinksPage/Links.tsx";
 import About from "@/pages/AboutPage/About.tsx";
 
@@ -32,13 +32,15 @@ const Header: React.FC = () => {
     <>
       <div className='header'>
         <div className='header-content'>
-          <span style={{marginLeft: 20}}>MBSpace</span>
+          <Link to={'/'}>
+            <span style={{marginLeft: 20}}>MBSpace</span>
+          </Link>
           <div className='menu-items-container'>
             <Link to={'/'}>
-              <span className='menu-item'>Home</span>
-            </Link>
-            <Link to={'/posts'}>
               <span className='menu-item'>Posts</span>
+            </Link>
+            <Link to={'/gallery'}>
+              <span className='menu-item'>Gallery</span>
             </Link>
             <Link to={'/links'}>
               <span className='menu-item'>Links</span>
@@ -59,14 +61,14 @@ const Header: React.FC = () => {
       <div className='dropdown-menu-items-container'>
         <Link to={'/'}>
           <span className='dropdown-menu-item'>
-            <HomeIcon/>
-            <span style={{marginLeft: 20}}>首页 ( Home )</span>
-          </span>
-        </Link>
-        <Link to={'/posts'}>
-          <span className='dropdown-menu-item'>
             <ScrollText/>
             <span style={{marginLeft: 20}}>文章 ( Posts )</span>
+          </span>
+        </Link>
+        <Link to={'/gallery'}>
+          <span className='dropdown-menu-item'>
+            <Image/>
+            <span style={{marginLeft: 20}}>图库 ( Gallery )</span>
           </span>
         </Link>
         <Link to={'/links'}>
@@ -96,7 +98,7 @@ const App: React.FC = () => {
           <div id="layout" className='container'>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/posts" element={<Posts />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/links" element={<Links />} />
               <Route path="/about" element={<About />} />
             </Routes>

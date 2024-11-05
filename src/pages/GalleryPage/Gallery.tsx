@@ -1,7 +1,7 @@
 import './index.css'
 import {Tag} from "lucide-react";
 
-const PostsPage = () => {
+const GalleryPage = () => {
   return (
     <div className='posts-page-layout'>
       <div className='posts-tags-container'>
@@ -29,4 +29,4 @@ const PostsPage = () => {
   );
 }
 
-export default PostsPage;
+export default GalleryPage;
