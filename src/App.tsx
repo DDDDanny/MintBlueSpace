@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils.ts";
 import DotPattern from "@/components/ui/dot-pattern.tsx";
 import {Link, Route, Routes} from "react-router-dom";
 import Home from './pages/HomePage/Home.tsx';
-import Posts from "@/pages/Posts.tsx";
+import Posts from "@/pages/PostsPage/Posts.tsx";
 import Links from "@/pages/Links.tsx";
 import About from "@/pages/AboutPage/About.tsx";
 

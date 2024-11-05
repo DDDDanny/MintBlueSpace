@@ -8,6 +8,8 @@
   --header-color: #FAC145;
   --header-background-color: #292b30;
   --dropdown-menus-background-color: #303339;
+  --posts-tags-background-color: #30333920;
+  --posts-tags-item-background-color: #30333950;
 }
 
 [data-theme='dark'] {
@@ -16,6 +18,8 @@
   --header-color: #FAC145;
   --header-background-color: #1e2128;
   --dropdown-menus-background-color: #262930;
+  --posts-tags-background-color: #EEEEEE20;
+  --posts-tags-item-background-color: #EEEEEE20;
 }
 
 body {
