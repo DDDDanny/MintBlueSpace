@@ -155,3 +155,20 @@
         color: #FAC145;
     }
 }
+
+.post-item-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .item-tag-container {
+        height: 20px;
+        padding-right: 8px;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff20;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}
