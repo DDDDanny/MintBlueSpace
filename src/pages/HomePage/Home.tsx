@@ -3,6 +3,7 @@ import './index.css'
 import BoxReveal from "@/components/ui/box-reveal.tsx";
 import IconCloud from "@/components/ui/icon-cloud.tsx";
 import SparklesText from "@/components/ui/sparkles-text.tsx";
+import {CalendarDays, User} from "lucide-react";
 
 const HomePage: React.FC = () => {
   const slugs = [
@@ -50,7 +51,28 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <div className='posts-main-container'>
-        <div className='post-content-container'></div>
+        <div className='post-content-container'>
+          <div className='post-title-container'>
+            <span className='post-title'>培养设计感的4款小游戏</span>
+          </div>
+          <div className='post-content'>
+            <span>
+              虽说我是一个测试开发工程师，平时负责写写测试脚本、测试用例、开发开发小工具啥的，
+              这些事虽说不算无聊，但它们对我来说只是工作，而我的兴趣爱好更多的是偏向前端开发。
+            </span>
+          </div>
+          <div className='post-author-container'>
+            <div className='post-author-item'>
+              <User style={{height: 18}}/>
+              <span>MintBlue</span>
+            </div>
+            <div className='post-author-item'>
+              <CalendarDays style={{height: 18}}/>
+              <span>2024-11-01 15:15:15</span>
+            </div>
+
+          </div>
+        </div>
       </div>
     </>
   );

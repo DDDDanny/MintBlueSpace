@@ -75,18 +75,77 @@
 
     .post-content-container {
         width: 100%;
-        height: 200px;
         display: flex;
         flex-direction: column;
-        background-color: var(--background-color);
         border-radius: 8px;
-        box-shadow: var(--post-box-shadow);
         margin: 20px 0;
+        box-shadow: var(--post-box-shadow);
+        background-color: var(--background-color);
         transition: all .3s;
+        padding: 20px;
 
         &:hover {
             box-shadow: var(--post-box-shadow-hover);
             cursor: pointer;
+        }
+
+        .post-title-container {
+            display: flex;
+
+            .post-title {
+                font-size: 20px;
+                display: inline-block;
+                position: relative;
+                line-height: 45px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 2px;
+                    visibility: hidden;
+                    background-color: #FAC145;
+                    transition: .3s ease-in-out;
+                    transform: scaleX(0);
+                }
+
+                &:hover {
+                    color: #FAC145;
+                    transition: all .3s;
+                }
+
+                &:hover::after {
+                    left: 0;
+                    visibility: visible;
+                    transform: scaleX(1);
+                    width: 100%;
+                }
+            }
+        }
+
+        .post-content {
+            width: 100%;
+            margin-top: 20px;
+            line-height: 30px;
+            font-family: "Alibaba PuHuiTi 2.0", sans-serif;
+        }
+
+        .post-author-container {
+            width: 100%;
+            display: flex;
+            font-size: 13px;
+            margin-top: 30px;
+
+            .post-author-item {
+                display: flex;
+                margin-right: 20px;
+
+                span {
+                    margin-left: 10px
+                }
+            }
         }
     }
 }
