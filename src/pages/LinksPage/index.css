@@ -7,6 +7,7 @@
     grid-template-columns: repeat(auto-fill, 300px);
     grid-template-rows: repeat(auto-fill, 156px);
 }
+
 .link-item-container {
     width: 260px;
     height: 120px;
@@ -17,10 +18,16 @@
     justify-content: space-around;
     background-color: var(--background-color);
     box-shadow: var(--post-box-shadow);
+    transition: all .3s;
+
+    &:hover {
+        box-shadow: var(--post-box-shadow-hover);
+        cursor: pointer;
+    }
 
     .link-item-avatar {
-        width: 58px;
-        height: 58px;
+        width: 64px;
+        height: 64px;
         background-color: #EEEEEE;
         border-radius: 50%;
     }

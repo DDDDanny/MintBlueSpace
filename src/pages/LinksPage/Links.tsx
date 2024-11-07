@@ -4,7 +4,7 @@ const LinksPage = () => {
   return (
     <div className='links-main-layout'>
       <div className='link-item-container'>
-        <div className='link-item-avatar'></div>
+        <img src='src/assets/001.jpeg' alt='Avatar' className='link-item-avatar'/>
         <div className='link-item-blog-info'>
           <span className='link-item-name'>MintBlue</span>
           <span className='link-item-desc'>
