@@ -7,11 +7,11 @@ import {CalendarDays, User} from "lucide-react";
 
 const HomePage: React.FC = () => {
   const slugs = [
-    "typescript", "javascript", "react", "vuedotjs", "django",
-    "android", "html5", "css3", "nodejs", "redis", "lucide",
-    "express", "playwright", "mysql", "nginx", 'visualstudio',
-    "testcafe", "docker", "git", "jira", "github", "fastapi",
-    "gitlab", "python", "figma", "nestjs", "sass", "less", "vite",
+    "typescript", "javascript", "react", "vuedotjs", "django", "postman",
+    "android", "html5", "css3", "nodejs", "redis", "lucide", "gitkraken",
+    "express", "playwright", "mysql", "nginx", 'visualstudio', "beekeeperstudio",
+    "testcafe", "docker", "git", "jira", "github", "fastapi", "notion",
+    "gitlab", "python", "figma", "nestjs", "sass", "less", "vite", "npm",
     "pytest", "go", "openai", "discord", "stackoverflow", "bilibili",
     "wechat", "ios", "apple", "linux", "macos", "jenkins", "webstorm",
     "pinterest", "xiaohongshu", "pnpm", "googlefonts", "antdesign",
