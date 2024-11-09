@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import React, { useRef } from "react";
 import {
   AnimatePresence,
   motion,
@@ -18,6 +18,7 @@ interface BlurFadeProps {
     hidden: { y: number };
     visible: { y: number };
   };
+  key: string | number;
   duration?: number;
   delay?: number;
   yOffset?: number;

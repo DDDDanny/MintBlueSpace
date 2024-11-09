@@ -25,7 +25,7 @@ const GalleryPage = () => {
       <section id="photos" style={{ marginBottom: '2rem' }}>
         <div className="columns-2 gap-4 sm:columns-3">
           {images.map((imageUrl, idx) => (
-            <BlurFade delay={0.25 + idx * 0.05} inView>
+            <BlurFade delay={0.25 + idx * 0.05} inView key={ idx }>
               <img
                 className="mb-4 size-full rounded-lg object-contain"
                 src={imageUrl}
