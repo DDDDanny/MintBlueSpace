@@ -11,7 +11,10 @@ const HomePage: React.FC = () => {
     "android", "html5", "css3", "nodejs", "redis", "lucide",
     "express", "playwright", "mysql", "nginx", 'visualstudio',
     "testcafe", "docker", "git", "jira", "github", "fastapi",
-    "gitlab", "python", "figma", "nestjs", "sass", "less",
+    "gitlab", "python", "figma", "nestjs", "sass", "less", "vite",
+    "pytest", "go", "openai", "discord", "stackoverflow", "bilibili",
+    "wechat", "ios", "apple", "linux", "macos", "jenkins", "webstorm",
+    "pinterest", "xiaohongshu", "pnpm", "googlefonts", "antdesign",
   ];
   return (
     <>
