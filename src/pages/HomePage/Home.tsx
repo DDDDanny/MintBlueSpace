@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
     "testcafe", "docker", "git", "jira", "github", "fastapi", "notion",
     "gitlab", "python", "figma", "nestjs", "sass", "less", "vite", "npm",
     "pytest", "go", "openai", "discord", "stackoverflow", "bilibili",
-    "wechat", "ios", "apple", "linux", "macos", "jenkins", "webstorm",
+    "linux", "jenkins", "webstorm", "grafana", "vuetify", "flask", "mongodb",
     "pinterest", "xiaohongshu", "pnpm", "googlefonts", "antdesign",
   ];
   return (
