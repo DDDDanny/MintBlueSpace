@@ -4,3 +4,9 @@
     justify-content: center;
     margin-top: 50px;
 }
+
+.gallery-image {
+    border-radius: 16px;
+    width: 90%;
+    box-shadow: 0 4px 8px #00000030;
+}

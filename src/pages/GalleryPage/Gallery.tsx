@@ -27,10 +27,9 @@ const GalleryPage = () => {
           {images.map((imageUrl, idx) => (
             <BlurFade delay={0.25 + idx * 0.05} inView key={ idx }>
               <img
-                className="mb-4 size-full rounded-lg object-contain"
+                className="mb-4 size-full rounded-lg object-contain gallery-image"
                 src={imageUrl}
                 alt={`Random stock image ${idx + 1}`}
-                style={{ borderRadius: 16, width: '90%' }}
               />
             </BlurFade>
           ))}
