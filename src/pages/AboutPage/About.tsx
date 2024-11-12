@@ -1,9 +1,25 @@
 import '../AboutPage/index.css'
 
 const AboutPage = () => {
+  const aboutMeContent = "我是MintBlue。一个喜欢前端设计的测试开发工程师，" +
+    "也是一个被测试耽误的全栈开发"
+  const aboutMBSpaceContent = "MintBlue Space，是我独立设计和编写的个人网站。" +
+    "其实我很早就想做一个属于自己的个人网站了，之前用过Hexo搭建过，但我始终觉得差点意思, " +
+    "于是我就自己动手写了一个，MintBlue Space就此诞生。" +
+    "它可能不完美，但它独一无二！"
+
   return (
-    <div className='about-page-main'>
-      About
+    <div className="about-page-main-container">
+      <div className='about-page-main'>
+        <span className="about-page-title">关于MBSpace</span>
+        <span className="about-page-content" style={{ lineHeight: 3, textIndent: '2rem' }}>{aboutMBSpaceContent}</span>
+        <div className='about-mbspace-content'>
+          <img src='src/assets/logo1.png' alt='Avatar' style={{ width: 48, height: 48 }} />
+          <span style={{ marginTop: 20 }}>MintBlue Space</span>
+        </div>
+        <span className="about-page-title" style={{marginTop: 50}}>关于我</span>
+        <span className="about-page-content">{aboutMeContent}</span>
+      </div>
     </div>
   );
 }
