@@ -9,6 +9,7 @@ import Home from './pages/HomePage/Home.tsx';
 import Gallery from "@/pages/GalleryPage/Gallery.tsx";
 import Links from "@/pages/LinksPage/Links.tsx";
 import About from "@/pages/AboutPage/About.tsx";
+import PostPage from "@/pages/PostPage/post.tsx";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme(); // 在 ThemeProvider 内部使用
@@ -101,6 +102,7 @@ const App: React.FC = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/links" element={<Links />} />
               <Route path="/about" element={<About />} />
+              <Route path="/post/:id" element={<PostPage />} />
             </Routes>
           </div>
         </div>
