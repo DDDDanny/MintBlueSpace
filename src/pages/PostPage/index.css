@@ -1,0 +1,52 @@
+.post-page-layout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.post-title {
+    width: 100%;
+    font-size: 28px;
+}
+
+.post-desc-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 13px;
+
+    .post-desc-author {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .post-desc-time {
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        margin-left: 5px;
+    }
+}
+
+.post-content {
+    width: 100%;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: "Alibaba PuHuiTi 2.0", "Arial Narrow", Arial, sans-serif;
+    line-height: 28px;
+    margin-bottom: 20px;
+
+}
