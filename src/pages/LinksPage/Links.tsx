@@ -8,7 +8,7 @@ const LinksPage = () => {
       <div className='links-desc-container'>
         <Link style={{ minWidth: 17, color: '#FAC145' }}/>
         <span style={{ marginLeft: 10 }}>
-          友情链接：大家的博客和个人网站都在这里啦～如果有兴趣交换友链，可以点击这里进行交换～MBSpace欢迎新朋友加入👏
+          友情链接：这里汇集了大家的博客和个人网站～有兴趣交换友链的朋友可以点击这里进行申请～MBSpace期待新朋友的加入👏
         </span>
       </div>
       <div className='links-items-container'>
@@ -17,7 +17,7 @@ const LinksPage = () => {
           <div className='link-item-blog-info'>
             <span className='link-item-name'>MintBlue</span>
             <span className='link-item-desc'>
-              一个有趣的人一个有趣的人一个有趣一个有～
+              一个有趣的人
             </span>
           </div>
         </div>

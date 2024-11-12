@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
                 <span>我是</span>
                 <span style={{color: '#FAC145'}}>MintBlue</span>
                 <span>，一个喜欢前端设计的</span>
-                <span className='important-desc'>全栈开发工程师</span>
+                <span className='important-desc'>测试开发工程师</span>
                 <span>。在这里, 我会分享我的经验、实用的工具和一些有趣的东西🎉</span>
               </span>
             </BoxReveal>
