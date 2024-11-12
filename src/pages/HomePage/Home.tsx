@@ -4,6 +4,7 @@ import BoxReveal from "@/components/ui/box-reveal.tsx";
 import IconCloud from "@/components/ui/icon-cloud.tsx";
 import SparklesText from "@/components/ui/sparkles-text.tsx";
 import {CalendarDays, User} from "lucide-react";
+import {Link} from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const slugs = [
@@ -56,7 +57,9 @@ const HomePage: React.FC = () => {
       <div className='posts-main-container'>
         <div className='post-content-container'>
           <div className='post-title-container'>
-            <span className='post-title'>培养设计感的4款小游戏</span>
+            <Link to={'/post/000'}>
+              <span className='post-title'>培养设计感的4款小游戏</span>
+            </Link>
           </div>
           <div className='post-content'>
             <span>
