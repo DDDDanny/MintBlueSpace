@@ -20,12 +20,14 @@
     text-decoration-color: #FAC145;
     text-decoration-style: double;
     text-underline-offset: 8px;
+    line-height: 50px;
 }
 
 .about-page-content {
     margin-top: 20px;
     font-size: 18px;
     letter-spacing: 1px;
+    line-height: 3;
 }
 
 .about-mbspace-content {
@@ -40,4 +42,5 @@
     align-items: center;
     border-radius: 12px;
     margin-top: 20px;
+    margin-bottom: 40px;
 }

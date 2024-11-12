@@ -1,4 +1,5 @@
 import '../AboutPage/index.css'
+import BoxReveal from "@/components/ui/box-reveal.tsx";
 
 const AboutPage = () => {
   const aboutMeContent = "我是MintBlue。一个喜欢前端设计的测试开发工程师，" +
@@ -10,15 +11,25 @@ const AboutPage = () => {
 
   return (
     <div className="about-page-main-container">
-      <div className='about-page-main'>
-        <span className="about-page-title">关于MBSpace</span>
-        <span className="about-page-content" style={{ lineHeight: 3, textIndent: '2rem' }}>{aboutMBSpaceContent}</span>
+      <div className='about-page-main' >
+        <BoxReveal boxColor={"#FAC145"} duration={0.5}>
+          <span className="about-page-title">关于MBSpace</span>
+        </BoxReveal>
+        <BoxReveal boxColor={"#FAC145"} duration={0.6}>
+          <span className="about-page-content">
+            {aboutMBSpaceContent}
+          </span>
+        </BoxReveal>
         <div className='about-mbspace-content'>
           <img src='src/assets/logo1.png' alt='Avatar' style={{ width: 48, height: 48 }} />
           <span style={{ marginTop: 20 }}>MintBlue Space</span>
         </div>
-        <span className="about-page-title" style={{marginTop: 50}}>关于我</span>
-        <span className="about-page-content">{aboutMeContent}</span>
+        <BoxReveal boxColor={"#FAC145"} duration={0.7}>
+          <span className="about-page-title" style={{marginTop: 50}}>关于我</span>
+        </BoxReveal>
+        <BoxReveal boxColor={"#FAC145"} duration={0.8}>
+          <span className="about-page-content">{aboutMeContent}</span>
+        </BoxReveal>
       </div>
     </div>
   );
