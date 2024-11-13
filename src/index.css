@@ -218,3 +218,22 @@ body {
     color: #fff;
   }
 }
+
+.back-to-top-container {
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background-color: var(--blockquote-background-color);
+  box-shadow: 0 5px 5px 0 #00000030;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FAC145;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

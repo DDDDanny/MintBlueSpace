@@ -10,6 +10,7 @@ import Gallery from "@/pages/GalleryPage/Gallery.tsx";
 import Links from "@/pages/LinksPage/Links.tsx";
 import About from "@/pages/AboutPage/About.tsx";
 import PostPage from "@/pages/PostPage/post.tsx";
+import BackToTop from "@/components/ui/back-top.tsx";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme(); // 在 ThemeProvider 内部使用
@@ -114,6 +115,7 @@ const App: React.FC = () => {
         <div className='footer-container'>
           <span>Copyright © 2024 MintBlue</span>
         </div>
+        <BackToTop />
       </Router>
     </ThemeProvider>
   );
