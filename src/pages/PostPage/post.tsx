@@ -12,7 +12,7 @@ const PostPage = () => {
   const codeStyle = theme === 'dark' ? oneDark : oneLight;
 
   useEffect(() => {
-    fetch('/src/posts/000.md')
+    fetch('/src/posts/001.md')
       .then(response => response.text())
       .then(data => setMarkdown(data));
   }, []);
@@ -40,12 +40,12 @@ const PostPage = () => {
                 return !inline && match ? (
                   <div className='code-area-container'>
                     <div className='mac-editor-icons'>
-                      <span className='mac-editor-icon' style={{ marginLeft: 15, backgroundColor: '#f65f57' }}></span>
-                      <span className='mac-editor-icon' style={{ backgroundColor: '#fabc2f' }}></span>
-                      <span className='mac-editor-icon' style={{ backgroundColor: '#44c840' }}></span>
+                      <span className='mac-editor-icon' style={{ marginLeft: 15, backgroundColor: '#f65f57' }} />
+                      <span className='mac-editor-icon' style={{ backgroundColor: '#fabc2f' }} />
+                      <span className='mac-editor-icon' style={{ backgroundColor: '#44c840' }} />
                     </div>
                     <SyntaxHighlighter
-                      className='xxx'
+                      className='code-container'
                       style={ codeStyle }
                       language={match[1]}
                       PreTag="div"

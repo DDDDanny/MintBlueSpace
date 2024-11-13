@@ -72,11 +72,75 @@
     }
 }
 
-.xxx {
+.code-container {
     margin: 0 !important;
     border-radius: 0 0 8px 8px !important;
 }
 
 pre {
     font-size: 13px;
+}
+
+.post-content {
+    p {
+        font-size: 14px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    hr {
+        margin: 15px 0;
+        border-block-color: var(--post-hr-color);
+        border-block-end-width: 2px;
+    }
+
+    p code {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        background-color: var(--header-background-color);
+        color: #FAC145;
+    }
+
+    ul {
+        list-style: none; /* 取消默认的列表样式 */
+        padding-left: 10px;
+    }
+
+    ul > li::before {
+        content: '• ';
+        font-size: 20px;
+    }
+
+    ol {
+        list-style: none;
+        counter-reset: item;
+        padding-left: 10px;
+    }
+
+    ol > li::before {
+        content: counter(item) ". "; /* 显示当前计数器的值并加一个点 */
+        counter-increment: item; /* 每次增加计数器的值 */
+        font-weight: bold; /* 设置序号为加粗 */
+    }
+
+    blockquote {
+        padding: 10px 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+        border-left: 5px solid #FAC145;
+        background-color: var(--blockquote-background-color);
+        font-style: italic; /* 斜体 */
+    }
 }

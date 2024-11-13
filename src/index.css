@@ -13,6 +13,8 @@
   --posts-tags-background-color: #30333920;
   --posts-tags-item-background-color: #30333950;
   --mac-editor-background-color: #fafafa;
+  --post-hr-color: #2b2b2b50;
+  --blockquote-background-color: #ffffff;
 }
 
 [data-theme='dark'] {
@@ -26,6 +28,8 @@
   --posts-tags-background-color: #EEEEEE20;
   --posts-tags-item-background-color: #EEEEEE20;
   --mac-editor-background-color: #282c34;
+  --post-hr-color: #ffffff80;
+  --blockquote-background-color: #1e2128;
 }
 
 body {
