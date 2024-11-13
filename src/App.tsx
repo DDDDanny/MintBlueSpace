@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router, Navigate} from 'react-router-dom';
 import {Github, Sun, Moon, AlignJustify, Image, ScrollText, Link as LinkIcon, VenetianMask} from 'lucide-react'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
 import { cn } from "@/lib/utils.ts";
@@ -89,6 +89,10 @@ const Header: React.FC = () => {
   );
 }
 
+function RedirectPage() {
+  return <Navigate to="/" />;
+}
+
 const App: React.FC = () => {
   return (
     <ThemeProvider>
@@ -103,6 +107,7 @@ const App: React.FC = () => {
               <Route path="/links" element={<Links />} />
               <Route path="/about" element={<About />} />
               <Route path="/post/:id" element={<PostPage />} />
+              <Route path="/post" element={<RedirectPage />} />
             </Routes>
           </div>
         </div>
