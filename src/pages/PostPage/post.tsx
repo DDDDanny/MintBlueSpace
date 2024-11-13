@@ -1,11 +1,15 @@
 import './index.css'
 import {CalendarDays, User} from "lucide-react";
 import React, {useEffect, useState} from "react";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import ReactMarkdown from "react-markdown";
+import { useTheme } from "@/context/ThemeContext.tsx";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const PostPage = () => {
   const [markdown, setMarkdown] = useState('');
+  const { theme } = useTheme(); // 获取当前主题
+  const codeStyle = theme === 'dark' ? oneDark : oneLight;
 
   useEffect(() => {
     fetch('/src/posts/000.md')
@@ -28,7 +32,36 @@ const PostPage = () => {
           </div>
         </div>
         <div className='post-content'>
-          <Markdown>{markdown}</Markdown>
+          <ReactMarkdown
+            children={markdown}
+            components={{
+              code({ node, inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '');
+                return !inline && match ? (
+                  <div className='code-area-container'>
+                    <div className='mac-editor-icons'>
+                      <span className='mac-editor-icon' style={{ marginLeft: 15, backgroundColor: '#f65f57' }}></span>
+                      <span className='mac-editor-icon' style={{ backgroundColor: '#fabc2f' }}></span>
+                      <span className='mac-editor-icon' style={{ backgroundColor: '#44c840' }}></span>
+                    </div>
+                    <SyntaxHighlighter
+                      className='xxx'
+                      style={ codeStyle }
+                      language={match[1]}
+                      PreTag="div"
+                      {...props}
+                    >
+                      {String(children).replace(/\n$/, '')}
+                    </SyntaxHighlighter>
+                  </div>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                );
+              },
+            }}
+          />
         </div>
       </div>
     </div>

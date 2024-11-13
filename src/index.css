@@ -12,6 +12,7 @@
   --post-box-shadow-hover: 0 2px 16px #00000035;
   --posts-tags-background-color: #30333920;
   --posts-tags-item-background-color: #30333950;
+  --mac-editor-background-color: #fafafa;
 }
 
 [data-theme='dark'] {
@@ -24,6 +25,7 @@
   --post-box-shadow-hover: 0 2px 16px #00000070;
   --posts-tags-background-color: #EEEEEE20;
   --posts-tags-item-background-color: #EEEEEE20;
+  --mac-editor-background-color: #282c34;
 }
 
 body {
