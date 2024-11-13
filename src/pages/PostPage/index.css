@@ -109,7 +109,7 @@ pre {
         font-size: 12px;
         padding: 5px 10px;
         border-radius: 6px;
-        background-color: var(--header-background-color);
+        background-color: var(--blockquote-background-color);
         color: #FAC145;
     }
 
