@@ -1,9 +1,8 @@
 import { debounce } from 'lodash';
 import React, { useState, useEffect } from 'react';
-import {ChevronsUp, ChevronUp} from "lucide-react";
+import { ChevronsUp } from "lucide-react";
 
 const BackToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [element, setElement] = useState<any>(null);
 
   const interval = setInterval(() => {
@@ -15,9 +14,12 @@ const BackToTop = () => {
   }, 100);
 
   const handleScroll = debounce(() => {
-    setIsVisible(element.scrollTop > 30);
-    console.log(12)
-  }, 200)
+    if (element.scrollTop > 30){
+      document.getElementById('BackToTopBtn').classList.add('visible');
+    } else {
+      document.getElementById('BackToTopBtn').classList.remove('visible');
+    }
+  }, 100)
 
   // 监听滚动事件，判断滚动位置
   useEffect(() => {
@@ -32,11 +34,9 @@ const BackToTop = () => {
   };
 
   return (
-    isVisible && (
-      <div className='back-to-top-container' onClick={scrollToTop}>
-        <ChevronsUp />
-      </div>
-    )
+    <div id='BackToTopBtn' className='back-to-top-container' onClick={scrollToTop}>
+      <ChevronsUp/>
+    </div>
   );
 }
 
