@@ -8,27 +8,37 @@ import { oneDark, oneLight } from 'react-syntax-highlighter/dist/esm/styles/pris
 
 const PostPage = () => {
   const [markdown, setMarkdown] = useState('');
+  const [postInfo, setPostInfo] = useState({
+    title: '', author: 'MintBlue', date: ''
+  });
   const { theme } = useTheme(); // 获取当前主题
   const codeStyle = theme === 'dark' ? oneDark : oneLight;
 
   useEffect(() => {
-    fetch('/src/posts/001.md')
+    fetch('/src/posts/000.md')
       .then(response => response.text())
-      .then(data => setMarkdown(data));
+      .then(data => {
+        const info = data.split('<!-- info -->')[0]
+        const title = info.split('title: ')[1].split('\n')[0]
+        const author = info.split('author: ')[1].split('\n')[0]
+        const date = info.split('date: ')[1].split('\n')[0]
+        setPostInfo({ title, author, date })
+        setMarkdown(data.split('<!-- info -->')[1])
+      });
   }, []);
 
   return (
     <div className='post-page-layout'>
       <div className='post-page-container'>
-        <span className='post-title'>每日Python小技巧之bytes和str</span>
+        <span className='post-title'>{ postInfo.title }</span>
         <div className='post-desc-container'>
           <div className='post-desc-author'>
             <User style={{height: 14}}/>
-            <span>MintBlue</span>
+            <span>{ postInfo.author }</span>
           </div>
           <div className='post-desc-time'>
             <CalendarDays style={{height: 14}}/>
-            <span>2024-11-01 15:15:15</span>
+            <span>{ postInfo.date }</span>
           </div>
         </div>
         <div className='post-content'>
