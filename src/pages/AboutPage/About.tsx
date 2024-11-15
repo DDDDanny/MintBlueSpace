@@ -21,7 +21,7 @@ const AboutPage = () => {
           </span>
         </BoxReveal>
         <div className='about-mbspace-content'>
-          <img src='src/assets/logo1.png' alt='Avatar' style={{ width: 48, height: 48 }} />
+          <img src='/logo1.png' alt='Avatar' style={{ width: 48, height: 48 }} />
           <span style={{ marginTop: 20 }}>MintBlue Space</span>
         </div>
         <BoxReveal boxColor={"#FAC145"} duration={0.7}>
