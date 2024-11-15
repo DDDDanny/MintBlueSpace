@@ -84,6 +84,11 @@ const PostPage = () => {
                   </div>
                 )
               },
+              a({node, ...props}) {
+                return (
+                  <a {...props} target="_blank"/>
+                )
+              },
             }}
           />
         </div>
