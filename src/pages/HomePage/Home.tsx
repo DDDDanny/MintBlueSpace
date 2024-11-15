@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css'
 import BoxReveal from "@/components/ui/box-reveal.tsx";
 import IconCloud from "@/components/ui/icon-cloud.tsx";
 import SparklesText from "@/components/ui/sparkles-text.tsx";
-import {CalendarDays, User} from "lucide-react";
-import {Link} from "react-router-dom";
+import { CalendarDays, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const slugs = [
@@ -17,6 +17,23 @@ const HomePage: React.FC = () => {
     "linux", "jenkins", "webstorm", "grafana", "vuetify", "flask",
     "pinterest", "xiaohongshu", "pnpm", "googlefonts", "antdesign",
   ];
+
+  const [postsList, setPostsList] = useState([]);
+
+  // 获取文章列表
+  const getPostsList = () => {
+    fetch('http://119.45.32.82:8090/config/posts.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        setPostsList(data)
+      });
+  }
+
+  useEffect(() => {
+    getPostsList()
+  }, []);
+
   return (
     <>
       <div style={{display: 'flex', width: '100%', justifyContent: 'space-around', flexWrap: 'wrap'}}>
@@ -55,30 +72,31 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <div className='posts-main-container'>
-        <div className='post-content-container'>
-          <div className='post-title-container'>
-            <Link to={'/post/000'}>
-              <span className='post-title'>培养设计感的4款小游戏</span>
-            </Link>
-          </div>
-          <div className='post-content'>
-            <span>
-              虽说我是一个测试开发工程师，平时负责写写测试脚本、测试用例、开发开发小工具啥的，
-              这些事虽说不算无聊，但它们对我来说只是工作，而我的兴趣爱好更多的是偏向前端开发。
-            </span>
-          </div>
-          <div className='post-author-container'>
-            <div className='post-author-item'>
-              <User style={{height: 18}}/>
-              <span>MintBlue</span>
-            </div>
-            <div className='post-author-item'>
-              <CalendarDays style={{height: 18}}/>
-              <span>2024-11-01 15:15:15</span>
-            </div>
+        {
+          postsList.map((post, index) => (
+            <div className='post-content-container' key={index}>
+              <div className='post-title-container'>
+                <Link to={`/post/${post.id}`}>
+                  <span className='post-title'>{ post.title }</span>
+                </Link>
+              </div>
+              <div className='post-content'>
+                <span>{ post.desc }</span>
+              </div>
+              <div className='post-author-container'>
+                <div className='post-author-item'>
+                  <User style={{height: 18}}/>
+                  <span>{ post.author }</span>
+                </div>
+                <div className='post-author-item'>
+                  <CalendarDays style={{height: 18}}/>
+                  <span>{ post.date }</span>
+                </div>
 
-          </div>
-        </div>
+              </div>
+            </div>
+          ))
+        }
       </div>
     </>
   );
