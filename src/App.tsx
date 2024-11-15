@@ -53,7 +53,9 @@ const Header: React.FC = () => {
           </div>
           <div className='icons-container'>
             <div className='menu-suite' onClick={toggleDropdown}><AlignJustify/></div>
-            <div className='icon-item'><Github/></div>
+            <Link to={'https://github.com/DDDDanny'} target="_blank">
+              <div className='icon-item'><Github/></div>
+            </Link>
             <div className='icon-item' onClick={toggleTheme}>
               {isLightTheme ? <Sun/> : <Moon/>}
             </div>
