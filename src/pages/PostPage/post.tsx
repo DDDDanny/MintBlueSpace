@@ -72,6 +72,18 @@ const PostPage = () => {
                   </code>
                 );
               },
+              img({node, ...props}) {
+                return (
+                  <div align={'center'} style={{ margin: "20px 0" }}>
+                    <img
+                      {...props}
+                      className='markdown-image-style'
+                      loading="lazy" // 启用懒加载
+                      alt={props.alt || 'image'}
+                    />
+                  </div>
+                )
+              },
             }}
           />
         </div>

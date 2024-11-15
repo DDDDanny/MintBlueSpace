@@ -144,3 +144,10 @@ pre {
         font-style: italic; /* 斜体 */
     }
 }
+
+.markdown-image-style {
+    max-width: 100%;
+    height: auto;
+    box-shadow: var(--post-box-shadow);
+    border-radius: 12px;
+}
