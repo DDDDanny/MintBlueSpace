@@ -1,6 +1,7 @@
 import './index.css'
 import {CalendarDays, User} from "lucide-react";
 import React, {useEffect, useState} from "react";
+import { useParams } from 'react-router-dom';
 import ReactMarkdown from "react-markdown";
 import { useTheme } from "@/context/ThemeContext.tsx";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -13,9 +14,10 @@ const PostPage = () => {
   });
   const { theme } = useTheme(); // 获取当前主题
   const codeStyle = theme === 'dark' ? oneDark : oneLight;
-
+  // 使用 useParams 钩子获取动态路由参数
+  const { id } = useParams();
   useEffect(() => {
-    fetch('/src/posts/000.md')
+    fetch(`http://119.45.32.82:8090/posts/${id}.md `)
       .then(response => response.text())
       .then(data => {
         const info = data.split('<!-- info -->')[0]
