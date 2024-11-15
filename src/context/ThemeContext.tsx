@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 // ThemeProvider 组件，提供主题上下文
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<string>(
-    localStorage.getItem('MintBlueSpaceTheme') === 'dark' ? 'dark' : 'light'
+    localStorage.getItem('MintBlueSpaceTheme') === 'light' ? 'light' : 'dark'
   )
 
   // 切换主题的函数
