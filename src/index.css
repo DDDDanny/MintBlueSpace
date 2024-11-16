@@ -71,6 +71,11 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 24px;
+
+    /* S (320px - 479px) */
+    @media (max-width: 767px) {
+      justify-content: space-between;
+    }
   }
 
   .menu-items-container {
@@ -78,6 +83,11 @@ body {
     font-size: 18px;
     margin-left: 100px;
     line-height: 36px;
+
+    /* S (320px - 479px) */
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     .menu-item {
       display: inline-block;
@@ -102,11 +112,6 @@ body {
         visibility: visible;
         transform: scaleX(1);
         width: 100%;
-      }
-
-      /* S (320px - 479px) */
-      @media (max-width: 767px) {
-        display: none;
       }
     }
   }
