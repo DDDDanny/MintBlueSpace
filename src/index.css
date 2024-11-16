@@ -32,13 +32,27 @@
   --blockquote-background-color: #1e2128;
 }
 
+@font-face {
+  font-family: 'AlibabaPuHuiTi';
+  src: url('src/assets/AlibabaPuHuiTi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DingTalk';
+  src: url('src/assets/DingTalk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  font-family: "DingTalk JinBuTi", sans-serif;
+  font-family: "DingTalk", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: all .3s;
