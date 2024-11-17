@@ -9,13 +9,12 @@ import { Link } from "react-router-dom";
 const HomePage: React.FC = () => {
   const slugs = [
     "typescript", "javascript", "react", "vuedotjs", "django", "postman",
-    "android", "html5", "css3", "redis", "lucide", "gitkraken", "mongodb",
-    "express", "playwright", "mysql", "nginx", 'visualstudio', "beekeeperstudio",
-    "testcafe", "docker", "git", "jira", "github", "fastapi", "notion",
-    "gitlab", "python", "figma", "nestjs", "sass", "less", "vite", "npm",
-    "pytest", "go", "openai", "discord", "stackoverflow", "bilibili",
-    "linux", "jenkins", "webstorm", "grafana", "vuetify", "flask",
-    "pinterest", "xiaohongshu", "pnpm", "googlefonts", "antdesign",
+     "html5", "css3", "redis", "lucide",  "mongodb", "express", "mysql",
+    "nginx",  "beekeeperstudio", "testcafe", "docker", "git", "jira",
+    "github", "fastapi", "notion", "gitlab", "python", "figma", "nestjs",
+    "sass","vite", "npm", "pytest", "go", "openai", "discord",  "bilibili",
+    "linux", "jenkins", "grafana", "flask", "stackoverflow",
+    "xiaohongshu", "pnpm", "antdesign",
   ];
 
   const [postsList, setPostsList] = useState([]);
