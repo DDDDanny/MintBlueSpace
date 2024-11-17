@@ -33,17 +33,19 @@
 }
 
 @font-face {
-  font-family: 'AlibabaPuHuiTi';
-  src: url('/src/font/AlibabaPuHuiTi.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'AlimamaFangYuanTi';
+  src: url('https://lzcdn.dianpusoft.cn/fonts/HYe/HYe3gj.woff') format('woff');
+  font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DingTalk';
-  src: url('/src/font/DingTalk.ttf') format('truetype');
+  src: url("https://lzcdn.dianpusoft.cn/fonts/DingTalkJinBuTi/DingTalk-JinBuTi.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
