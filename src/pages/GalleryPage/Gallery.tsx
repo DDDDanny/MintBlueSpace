@@ -9,7 +9,7 @@ const GalleryPage = () => {
 
   useEffect(() => {
     // 使用 fetch 获取本地 JSON 文件
-    fetch('src/config/imagesList.json')  // 加载文件
+    fetch('http://119.45.32.82:8090/config/gallery.json')  // 加载文件
       .then(response => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
