@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
 
   // 获取文章列表
   const getPostsList = () => {
-    fetch('http://119.45.32.82:8090/config/posts.json')
+    fetch('https://cdn.mintblue.top/config/posts.json')
       .then(response => response.json()).then(data => {
         setPostsList(data)
       });

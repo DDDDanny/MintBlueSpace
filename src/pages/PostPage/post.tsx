@@ -17,7 +17,7 @@ const PostPage = () => {
   // 使用 useParams 钩子获取动态路由参数
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://119.45.32.82:8090/posts/${id}.md `)
+    fetch(`https://cdn.mintblue.top/posts/${id}.md `)
       .then(response => response.text())
       .then(data => {
         const info = data.split('<!-- info -->')[0]
