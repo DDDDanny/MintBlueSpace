@@ -23,13 +23,14 @@ const GalleryPage = () => {
   return (
     <div className='gallery-main-layout'>
       <section id="photos" style={{ marginBottom: '2rem' }}>
-        <div className="columns-2 gap-4 sm:columns-3">
+        <div className="columns-2 gap-4 sm:columns-4">
           {images.map((imageUrl, idx) => (
             <BlurFade delay={0.25 + idx * 0.05} inView key={ idx }>
               <img
-                src={ imageUrl }
+                src={ 'https://conf.mintblue.top/gallery/' + imageUrl }
                 alt={`Random stock image ${idx + 1}`}
                 className="mb-4 size-full rounded-lg object-contain gallery-image"
+                loading="lazy"
               />
             </BlurFade>
           ))}
