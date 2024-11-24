@@ -116,9 +116,14 @@ const App: React.FC = () => {
         </div>
         <div className='footer-container'>
           <span>Copyright © 2024 MintBlue</span>
-        </div>
-        <BackToTop />
-      </Router>
+          <span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">
+              蜀ICP备2024110734号-1
+            </a>
+          </span>
+      </div>
+      <BackToTop/>
+    </Router>
     </ThemeProvider>
   );
 };
