@@ -3,12 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="loading.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="tagcanvas.min.js" type="module"></script>
     <title>MintBlue的分享空间</title>
+    <style>
+      /* 加载页面的样式 */
+      #loading {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
+  <body style="margin: 0;">
+    <!-- 加载页面 -->
+    <div id="loading">
+      <div class="loading-container">
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+        <div class="slice"></div>
+      </div>
+    </div>
+    <script>
+      // 等待所有资源加载完成
+      window.onload = () => {
+        const loadingElement = document.getElementById('loading');
+        if (loadingElement) {
+          loadingElement.remove();
+          setTimeout(() => {
+            const rootElement = document.getElementById('root')
+            rootElement.style.opacity = 1
+          }, 200)
+        }
+      };
+    </script>
+    <div id="root" style="opacity: 0;transition: all .5s"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
