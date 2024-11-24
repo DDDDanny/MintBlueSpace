@@ -8,18 +8,19 @@
     <script src="tagcanvas.min.js" type="module"></script>
     <title>MintBlue的分享空间</title>
     <style>
-      /* 加载页面的样式 */
       #loading {
         width: 100%;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        opacity: 1;
+        transition: all .5s;
       }
     </style>
   </head>
   <body style="margin: 0;">
-    <!-- 加载页面 -->
     <div id="loading">
       <div class="loading-container">
         <div class="slice"></div>
@@ -29,14 +30,18 @@
         <div class="slice"></div>
         <div class="slice"></div>
       </div>
+      <span class="loading-wording">
+        欢迎来到MintBlue Space
+      </span>
     </div>
     <script>
       // 等待所有资源加载完成
       window.onload = () => {
         const loadingElement = document.getElementById('loading');
         if (loadingElement) {
-          loadingElement.remove();
+          loadingElement.style.opacity = 0
           setTimeout(() => {
+            loadingElement.remove();
             const rootElement = document.getElementById('root')
             rootElement.style.opacity = 1
           }, 200)

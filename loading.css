@@ -159,3 +159,18 @@
         opacity: 0.65;
     }
 }
+
+@font-face {
+    font-family: 'DingTalk';
+    src: url("https://lzcdn.dianpusoft.cn/fonts/DingTalkJinBuTi/DingTalk-JinBuTi.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.loading-wording {
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: "DingTalk", sans-serif;
+    color: #FAC145;
+}
