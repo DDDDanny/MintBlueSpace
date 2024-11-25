@@ -6,11 +6,24 @@ const GalleryPage = () => {
 
   const [galleryImages, setGalleryImages] = useState([])
 
+  //  Fisher-Yates 洗牌算法
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      // 随机索引
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      // 交换元素
+      [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+    }
+    return array;
+  }
+
   // 获取Gallery Image列表
   const getGalleryImagesList = () => {
-    fetch('https://conf.mintblue.top/config/gallery.json')
-      .then(response => response.json()).then(data => {
-      setGalleryImages(data)
+    fetch('https://conf.mintblue.top/config/gallery.json').then(response =>
+      response.json()
+    ).then(data => {
+      const newData = shuffleArray(data)
+      setGalleryImages(newData)
     });
   }
 
