@@ -2,12 +2,45 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .gallery-image {
+    width: 100%;
+    display: block;
     border-radius: 12px;
-    /*width: 300px;*/
     box-shadow: 0 4px 8px #00000050;
+}
 
+.images-container {
+    column-gap: 20px; /* 设置列间距 */
+    margin: 10px;
+
+    @media (min-width: 890px) {
+        column-count: 4;
+    }
+
+    @media(max-width: 889px) and (min-width: 665px) {
+        column-count: 3;
+    }
+
+    @media (max-width: 664px) {
+        column-count: 2;
+    }
+}
+
+.images-container-box {
+    break-inside: avoid; /* 防止元素被分割 */
+    margin-bottom: 20px;
+    opacity: 0; /* 初始隐藏 */
+    transform: translateY(20px); /* 初始偏移 */
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* 定义动画 */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

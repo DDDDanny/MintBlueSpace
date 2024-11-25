@@ -1,41 +1,51 @@
 import './index.css'
-import BlurFade from "@/components/ui/blur-fade.tsx";
 
 import {useEffect, useState} from "react";
 
 const GalleryPage = () => {
 
-  const [images, setImages] = useState([]);
+  const [galleryImages, setGalleryImages] = useState([])
+
+  // 获取Gallery Image列表
+  const getGalleryImagesList = () => {
+    fetch('https://conf.mintblue.top/config/gallery.json')
+      .then(response => response.json()).then(data => {
+      setGalleryImages(data)
+    });
+  }
+
+  // 创建Image Node
+  const createImageNode = () => {
+    const gallery = document.querySelector('.images-container');
+    gallery.innerHTML = ''
+
+    // 动态添加图片
+    galleryImages.forEach((imageUrl, index) => {
+      const item = document.createElement('div');
+      item.className = 'images-container-box';
+      item.style.animationDelay = `${index * 0.1}s`;
+
+      const img = document.createElement('img');
+      img.className = 'gallery-image'
+      img.src = 'https://conf.mintblue.top/gallery/' + imageUrl;
+      img.alt = imageUrl;
+
+      item.appendChild(img);
+      gallery.appendChild(item);
+    });
+  }
 
   useEffect(() => {
-    // 使用 fetch 获取本地 JSON 文件
-    fetch('https://conf.mintblue.top/config/gallery.json')  // 加载文件
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json(); // 自动解析为 JSON 对象
-      })
-      .then(parsedData => setImages(parsedData)) // 设置解析后的数据
-      .catch(error => console.error("Error loading JSON file:", error));
+    getGalleryImagesList()
   }, []);
+
+  useEffect(() => {
+    createImageNode()
+  }, [galleryImages]);
 
   return (
     <div className='gallery-main-layout'>
-      <section id="photos" style={{ marginBottom: '2rem' }}>
-        <div className="columns-2 gap-4 sm:columns-4">
-          {images.map((imageUrl, idx) => (
-            <BlurFade delay={0.25 + idx * 0.05} inView key={ idx }>
-              <img
-                src={ 'https://conf.mintblue.top/gallery/' + imageUrl }
-                alt={`Random stock image ${idx + 1}`}
-                className="mb-4 size-full rounded-lg object-contain gallery-image"
-                loading="lazy"
-              />
-            </BlurFade>
-          ))}
-        </div>
-      </section>
+      <div className='images-container'></div>
     </div>
   );
 }
