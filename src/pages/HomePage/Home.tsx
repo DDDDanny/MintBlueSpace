@@ -23,6 +23,8 @@ const HomePage: React.FC = () => {
   const getPostsList = () => {
     fetch('https://conf.mintblue.top/config/posts.json')
       .then(response => response.json()).then(data => {
+        // 对文章进行排序
+        data.sort((a, b) => b.id - a.id);
         setPostsList(data)
       });
   }
