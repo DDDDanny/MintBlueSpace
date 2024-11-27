@@ -31,6 +31,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     getPostsList()
+    document.getElementsByClassName('container-box')[0].scrollTo({top: 0})
   }, []);
 
   return (
