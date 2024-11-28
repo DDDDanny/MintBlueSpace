@@ -165,3 +165,30 @@ pre {
     box-shadow: var(--post-box-shadow);
     border-radius: 12px;
 }
+
+.post-footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .post-footer-item, .post-footer-item-box {
+        width: 160px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background-color: var(--background-color);
+        box-shadow: var(--post-box-shadow);
+
+        span {
+            margin: 0 10px;
+        }
+
+        .post-footer-item-box {
+            cursor: pointer;
+        }
+
+    }
+}

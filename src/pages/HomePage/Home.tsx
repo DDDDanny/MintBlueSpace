@@ -26,6 +26,7 @@ const HomePage: React.FC = () => {
         // 对文章进行排序
         data.sort((a, b) => b.id - a.id);
         setPostsList(data)
+        localStorage.setItem('POSTS', JSON.stringify(data))
       });
   }
 
