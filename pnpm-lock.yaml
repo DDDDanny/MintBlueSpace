@@ -32,6 +32,9 @@ importers:
       framer-motion:
         specifier: ^11.11.10
         version: 11.11.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      ldrs:
+        specifier: ^1.0.2
+        version: 1.0.2
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -1458,6 +1461,9 @@ packages:
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==, tarball: https://registry.npmmirror.com/keyv/-/keyv-4.5.4.tgz}
+
+  ldrs@1.0.2:
+    resolution: {integrity: sha512-sYJmivdkIiHrUEqTrEWccBoLdaENpzbzkABI5rk8rRxTXrg9i2xVuDvUUuhOhJY3RmQyaoxs046pM1DCRdcIpg==, tarball: https://registry.npmmirror.com/ldrs/-/ldrs-1.0.2.tgz}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==, tarball: https://registry.npmmirror.com/levn/-/levn-0.4.1.tgz}
@@ -3407,6 +3413,8 @@ snapshots:
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
+
+  ldrs@1.0.2: {}
 
   levn@0.4.1:
     dependencies:

@@ -1,4 +1,5 @@
 import './index.css'
+import 'ldrs/helix';
 import {CalendarDays, User, ChevronsLeft, ChevronsRight, Sparkles} from "lucide-react";
 import React, {useEffect, useState} from "react";
 import { useParams, useNavigate } from 'react-router-dom';
@@ -155,7 +156,10 @@ const PostPage = () => {
             </div>
           </div>
         ) : (
-          <div>666</div>
+          <div className='post-loading-container'>
+            <l-helix size="45" speed="2.5" color="#FAC145" />
+            <span>加载中···</span>
+          </div>
         )
       }
 
