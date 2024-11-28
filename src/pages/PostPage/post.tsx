@@ -54,6 +54,7 @@ const PostPage = () => {
         setMarkdown(data.split('<!-- info -->')[1])
       }).then(() => {
       findAdjacentIDs()
+      document.getElementsByClassName('container-box')[0].scrollTo({top: 0})
     })
   }, [id]);
 
