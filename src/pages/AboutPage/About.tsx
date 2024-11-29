@@ -1,5 +1,6 @@
 import '../AboutPage/index.css'
 import BoxReveal from "@/components/ui/box-reveal.tsx";
+import {useEffect} from "react";
 
 const AboutPage = () => {
   const aboutMeContent = "我是MintBlue。一个喜欢前端设计的测试开发工程师，" +
@@ -8,6 +9,10 @@ const AboutPage = () => {
     "其实我很早就想做一个属于自己的个人网站了，之前用过Hexo搭建过，但我始终觉得差点意思, " +
     "于是我就自己动手写了一个，MintBlue Space就此诞生。" +
     "它可能不完美，但它独一无二！"
+
+  useEffect(() => {
+    document.getElementsByClassName('container-box')[0].scrollTo({top: 0})
+  }, []);
 
   return (
     <div className="about-page-main-container">
