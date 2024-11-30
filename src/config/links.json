@@ -3,12 +3,21 @@
     "id": "001",
     "name": "MintBlue",
     "desc": "一个有趣的人",
-    "linkUrl": "https://www.baidu.com"
+    "linkUrl": "https://www.mintblue.top",
+    "imageUrl": "https://conf.mintblue.top/links/mintblue.jpeg"
   },
   {
     "id": "002",
-    "name": "MintBlue",
+    "name": "Fatpandac",
     "desc": "一个有趣的人",
-    "linkUrl": "https://www.baidu.com"
+    "linkUrl": "https://www.fatpandac.com/",
+    "imageUrl": "https://conf.mintblue.top/links/mintblue.jpeg"
+  },
+  {
+    "id": "002",
+    "name": "Fatpandac",
+    "desc": "一个有趣的人",
+    "linkUrl": "https://www.fatpandac.com/",
+    "imageUrl": "https://conf.mintblue.top/links/mintblue.jpeg"
   }
 ]
