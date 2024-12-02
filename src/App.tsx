@@ -53,7 +53,7 @@ const Header: React.FC = () => {
           </div>
           <div className='icons-container'>
             <div className='menu-suite' onClick={toggleDropdown}><AlignJustify/></div>
-            <Link to={'https://github.com/DDDDanny'} target="_blank">
+            <Link to={'https://github.com/DDDDanny'} target="_blank" rel="noopener noreferrer">
               <div className='icon-item'><Github/></div>
             </Link>
             <div className='icon-item' onClick={toggleTheme}>
@@ -117,7 +117,7 @@ const App: React.FC = () => {
         <div className='footer-container'>
           <span>Copyright © 2024 MintBlue</span>
           <span>
-            <a href="https://beian.miit.gov.cn/" target="_blank">
+            <a href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank">
               蜀ICP备2024110734号-1
             </a>
           </span>
