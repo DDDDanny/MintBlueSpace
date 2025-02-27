@@ -4,20 +4,41 @@
     "name": "MintBlue",
     "desc": "一个有趣的人",
     "linkUrl": "https://www.mintblue.top",
-    "imageUrl": "https://conf.mintblue.top/links/mintblue.jpeg"
+    "imageUrl": "https://conf.mintblue.top/links/MintBlue.png"
   },
   {
     "id": "002",
-    "name": "zzhack",
-    "desc": "一个有趣的人",
-    "linkUrl": "https://www.zzhack.fun/",
-    "imageUrl": "https://conf.mintblue.top/links/mintblue.jpeg"
+    "name": "DeepSeek",
+    "desc": "探索未至之境",
+    "linkUrl": "https://chat.deepseek.com/",
+    "imageUrl": "https://conf.mintblue.top/links/deepseek.png"
   },
   {
     "id": "003",
-    "name": "Fatpandac",
-    "desc": "不知道写啥的个人博客",
-    "linkUrl": "https://www.fatpandac.com/",
-    "imageUrl": "https://avatars.githubusercontent.com/u/30423976?v=4"
+    "name": "Lucide",
+    "desc": "Beautiful icons",
+    "linkUrl": "https://lucide.dev/",
+    "imageUrl": "https://conf.mintblue.top/links/Lucide.png"
+  },
+  {
+    "id": "004",
+    "name": "Copilot",
+    "desc": "GitHub Copilot",
+    "linkUrl": "https://github.com/copilot/",
+    "imageUrl": "https://conf.mintblue.top/links/copilot.png"
+  },
+  {
+    "id": "005",
+    "name": "Mermaid",
+    "desc": "Charting tool",
+    "linkUrl": "https://mermaid.js.org/",
+    "imageUrl": "https://conf.mintblue.top/links/mermaid.png"
+  },
+  {
+    "id": "006",
+    "name": "Playwright",
+    "desc": "Playwright Test",
+    "linkUrl": "https://playwright.dev/",
+    "imageUrl": "https://conf.mintblue.top/links/Playwright.png"
   }
 ]
