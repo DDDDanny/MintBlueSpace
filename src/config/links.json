@@ -40,5 +40,19 @@
     "desc": "Playwright Test",
     "linkUrl": "https://playwright.dev/",
     "imageUrl": "https://conf.mintblue.top/links/Playwright.png"
+  },
+  {
+    "id": "007",
+    "name": "ollama",
+    "desc": "ollama",
+    "linkUrl": "https://ollama.com/",
+    "imageUrl": "https://conf.mintblue.top/links/ollama.png"
+  },
+  {
+    "id": "008",
+    "name": "FastAPI",
+    "desc": "FastAPI Framework",
+    "linkUrl": "https://fastapi.tiangolo.com/",
+    "imageUrl": "https://conf.mintblue.top/links/fastapi.png"
   }
 ]
