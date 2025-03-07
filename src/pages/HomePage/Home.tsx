@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
     fetch('https://conf.mintblue.top/config/posts.json')
       .then(response => response.json()).then(data => {
         // 对文章进行排序
-        data.sort((a, b) => b.id - a.id);
+        data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         setPostsList(data)
         localStorage.setItem('POSTS', JSON.stringify(data))
       });
