@@ -19,7 +19,7 @@ const GalleryPage = () => {
 
   // 获取Gallery Image列表
   const getGalleryImagesList = () => {
-    fetch('https://conf.mintblue.top/config/gallery.json').then(response =>
+    fetch('https://bucket.mintblue.top/config/gallery.json').then(response =>
       response.json()
     ).then(data => {
       const newData = shuffleArray(data)
@@ -40,7 +40,7 @@ const GalleryPage = () => {
 
       const img = document.createElement('img');
       img.className = 'gallery-image'
-      img.src = 'https://conf.mintblue.top/gallery/' + imageUrl;
+      img.src = imageUrl;
       img.alt = imageUrl;
 
       item.appendChild(img);
