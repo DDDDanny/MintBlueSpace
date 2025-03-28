@@ -10,7 +10,7 @@ const LinksPage = () => {
 
   useEffect(() => {
     // 使用 fetch 获取本地 JSON 文件
-    fetch('https://conf.mintblue.top/config/links.json').then(response => {
+    fetch('https://bucket.mintblue.top/config/links.json').then(response => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
