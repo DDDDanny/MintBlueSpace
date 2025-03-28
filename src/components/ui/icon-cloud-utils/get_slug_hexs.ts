@@ -1,8 +1,8 @@
 import {addHash} from './add_hash'
 import {getSlug} from './get_slug'
 
-const url =
-  'https://conf.mintblue.top/config/simple-icons.json'
+const url = 'https://bucket.mintblue.top/config/simple-icons.json'
+
 let cache:
   | Record<string, {title: string; hex: string; slug: string}>
   | undefined
