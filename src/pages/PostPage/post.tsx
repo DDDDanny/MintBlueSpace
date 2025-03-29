@@ -43,7 +43,7 @@ const PostPage = () => {
   }
 
   useEffect(() => {
-    fetch(`https://conf.mintblue.top/posts/${id}.md `)
+    fetch(`https://bucket.mintblue.top/posts/${id}.md `)
       .then(response => response.text())
       .then(data => {
         const info = data.split('<!-- info -->')[0]
